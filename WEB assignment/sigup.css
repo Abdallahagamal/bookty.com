@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'KEANON';
+    src: url('KEANON.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+
+    font-family: "KEANON";
+    background-color: #FFF8E8;
+    
+}
+.mainimage {
+    position: absolute; 
+    top: 50%; 
+    left: 75%; 
+    transform: translate(-50%, -50%); 
+}
+
+.hero2 .Create{
+    position: absolute; 
+    top: 10%;
+    left: 15%;
+    font-size: 25px;
+    font-family: "KEANON";
+    color: #674636;
+}
+
+.b1{
+    background-color: #674636;
+    border-radius: 30px;
+    font-size: 15px; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 115px;
+    text-align: center;
+
+
+}
+.button1{
+    position: absolute; 
+    top: 85%; 
+    left: 15%;
+}
+
+.b2 {
+    background-color: transparent; 
+    border: 1.5px solid #ffffff; 
+    border-radius: 30px;
+    font-size: 14px; 
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 15px 35px;
+    text-align: center;
+}
+.button2{
+    position: absolute; 
+    top: 90%;
+    left:86%;
+}
+.hero2 .Create2{
+    position: absolute; 
+    top: 10%; 
+    left: 15%;
+    font-size: 15px;
+    font-family: "KEANON";
+    text-align: center;
+    color: #ffffff;
+    position: absolute; 
+    top: 88%; 
+    left:77%;
+}
+
+.form1 input::placeholder {
+    font-family: "KEANON";
+    font-size: 12px;
+    color: #674636; 
+    position: absolute; 
+    left: 5%;
+
+}
+
+.form1 .boxes{
+    position: absolute; 
+    top: 32%; 
+    left: 10%;
+    font-size: 12px;
+    
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    background-color: transparent; 
+    border: 0.5px solid #674636;
+    border-radius: 30px; 
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    outline: none;
+    color: #674636; 
+    font-family: "KEANON";
+    font-size: 12px;
+}
+
+.form1 .usertype {
+    position: absolute; 
+    top: 22%; 
+    left: 14%;
+    font-size: 20px;
+    color: #674636; 
+    font-family: "KEANON";
+}
+input[type="radio"] {
+    appearance: none; 
+    width: 20px; 
+    height: 20px; 
+    border: 1.5px solid #674636; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    cursor: pointer; 
+}
+
+input[type="radio"]:checked {
+    background-color: #674636; 
+}
+
+
