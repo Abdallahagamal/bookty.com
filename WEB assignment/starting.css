@@ -16,7 +16,7 @@ body {
     font-family: KEANON, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('startingpage.png') no-repeat ;
+    background: url('final222.png') no-repeat ;
     background-color: #242424;
     background-size: 1589px, 714px;
     
@@ -60,6 +60,37 @@ body {
 
     transform: translate(80px,10px);
 }
+.b2{
+
+    background-color: #242424;
+    border-radius: 30px;
+    font-size: 13px; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    text-align: center;
+}
+.button2{
+    position: absolute;
+    top:-15% ;
+    left: 145%;
+}
+.b3 {
+    background-color: #ffffff;
+    border-radius: 30px;
+    font-size: 12px; 
+    color: #242424;
+    text-decoration: none;
+    padding: 15px 20px;
+    text-align: center;
+}
+.button3 {
+    position: fixed; /* Fixed relative to the viewport */
+    top: -72px;      /* Adjust vertical position to match Login */
+    right: -610px;   
+}
+
+
 
 .b1:hover {
     background-color: #444;
