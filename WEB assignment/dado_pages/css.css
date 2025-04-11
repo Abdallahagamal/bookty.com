@@ -1,0 +1,133 @@
+/* General styles */
+@font-face {
+    font-family: 'KEANON';
+    src: url('KEANON.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{
+    font-family: 'KEANON', Arial, Helvetica, sans-serif; 
+  }
+body {
+   background-color: #fff8e8;
+   padding: 0;
+   margin: 0px;
+}
+
+#dado_nav{
+    margin-top: 25px;
+    display: flex;
+}
+
+.reg-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+#dado_bar{
+    margin-right: -80px; 
+}
+
+#dado_home{
+
+    margin-left: 16px;
+}
+#dado_search{
+    height: 30px;
+    width: 250px;
+    position: absolute;
+    right: 0px;
+    
+ 
+}
+
+h4{
+    
+    color: #674636;
+    margin: auto;
+    
+}
+
+h5{
+
+    color: #674636;
+    margin-left: 50px;
+    margin-top: 70px;
+    
+}
+
+.dado_toptrend{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    gap:80px ;
+   
+}
+
+figure{
+    margin: 0;
+    transition: all 0.3s ease; 
+   
+}
+
+
+.dado_book
+{
+
+    width:160px;
+    height: 256px;
+    border-radius: 7px 7px 0 0 ;
+    box-shadow: 5PX 5px 10px  #674636 ; 
+    margin-bottom: 0;
+    display: block;
+}
+
+hr{
+    width:80%;
+    justify-content: center;
+    
+}
+
+figcaption{
+    
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #fff8e8 ;
+    text-align: center;
+    background-color:  #674636;
+    width:160px;
+    font-size: 11px;
+    height: 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 5PX 5px 10px  #674636 ;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+    
+}
+
+.fig_hover:hover figcaption {
+
+    opacity: 1;
+
+}
+
+.fig_hover:hover  {
+
+    transform: scale(1.05);
+    
+}
+
+.reg-img:hover{
+   background-color:   #f1d7ca ;
+   transform: scale(1.05);
+}
+
+
+#dado_search:hover{
+    transform: scale(1.05);
+}
