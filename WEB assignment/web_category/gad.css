@@ -15,39 +15,54 @@
   }
   .body {
     background-color: #fff8e8;
+    overflow-x: hidden;
+
   }
-  #dado_nav {
+  #dado_nav{
+    
     margin-top: 25px;
     display: flex;
-  }
+    margin-left: 120px;
+}
   
   .reg-img {
+    margin-top: 5px;
+
     width: 30px;
     height: 30px;
     margin-right: 20px;
   }
   
   #dado_bar {
+    margin-top: 5px;
     margin-right: -80px; 
   }
   
   #dado_home {
+    margin-top: 5px;
     margin-left: 16px;
   }
   
-  #dado_search {
-    height: 30px;
-    width: 250px;
+  #dado_search{
+    margin-top: 14px;
+    height: 27px;
+    width: 300px;
     position: absolute;
-    right: 0px;
-  }
+    right: 10px;
+    max-width: 100%;
+ 
+}
   
-  h4 {
-    color: #674636;
-    margin: auto; 
-    text-align: center;
-  }
-  
+h4{
+  position: absolute;
+  color: #674636;
+  margin-top: 20px;
+  left: 45px;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+  /*
   h4:hover {
     color: #674636;
     text-decoration: none;
@@ -57,6 +72,7 @@
     transform: scale(1.1)
 
   }
+    */
   
   /* ============================= */
   
@@ -76,6 +92,7 @@
     width: 300px;
     line-height: 1.3;
     font-weight: bold;
+    margin-left: 70px;
   }
   
   /* Carousel */
@@ -99,6 +116,8 @@
     opacity: 0.6;
     transition: all 0.5s ease-in-out;
     margin: 0 15px;
+    margin-top:50px ;
+
   }
   
   .book.active {
@@ -124,7 +143,6 @@
   }
 .Trinding
 {
-   /* عايز اقلل المسافه من تحت */
    background-color: #674636;
    position: relative;
    border-radius: 90px;
@@ -145,19 +163,23 @@
   #gg
   {
     position: absolute;
-    top: 50px; 
-    left: 50px; 
+    top: 90px; 
+    left: 70px; 
+    text-align: center;
     right: 0;
-    
+    font-size: 40px;
   }
   #ggg
   {
     position: absolute;
     top: 250px;
+    font-size: 15px;
+    text-align: left;
+    justify-content: center;
   }
   .trending-box {
     background-color: #674636;
-    border-radius: 50px;
+    border-radius: 100px;
     padding: -200px; 
     display: flex; 
     max-width: 1200px; 
@@ -169,12 +191,13 @@
   
   .trending-img {
     width: 300px;
-    height: 400px;
+    height: 450px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    background-color: #674636;
     position: relative;
-    top: -90px;
+    top: -125px;
+    left: 20px;
+    margin-left: 20px;
   }
   .trending-img:hover {
     transform: scale(1.05);
@@ -226,7 +249,7 @@
 
   }
   .imgForInformaition {
-    width: 1512px;
+    width: 1592px;
     
     display: block;
     margin-top: 250px;
@@ -252,6 +275,7 @@
   .textForInformaition{
  position: absolute; top: 50%; left: 50%;
  margin-top: 70px;
+ margin-left: 20px;
  transform: translate(-50%, -50%);
  color: #fff8e8; 
  font-size: 25px;
@@ -264,7 +288,7 @@
  text-align: center;
  
   margin-top: 500px;
-  margin-left: 620px;
+  margin-left: 710px;
 
 
 }
@@ -283,20 +307,21 @@
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
+
 .footer-text
 {
   position: absolute;
   margin-top: 760px;
   margin-left: 600px;
   color: #fff8e8;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 .footer-text2
 {
   position: absolute;
   margin-top: 650px;
-  margin-left: 380px;
+  margin-left: 430px;
   color: #fff8e8;
   font-size: 13px;
   text-align: center;
@@ -308,10 +333,10 @@
 .Discover-more img
 {
   width:1000px;
-  height: 800px;
-  margin-right: 10px;
-  margin-left: 250px;
+  height: 650px;
+  margin-left: 320px;
   margin-top: 200px;
+
   cursor: pointer;
 }
 
@@ -327,7 +352,7 @@
   position: absolute;
   justify-content: center;
   display: flex;
-  margin-left: 600px;
+  margin-left: 650px;
   border: none;
   cursor: pointer;
   font-size: 16px;
