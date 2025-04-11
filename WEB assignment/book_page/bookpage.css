@@ -121,3 +121,68 @@ body{
     left: 450px;
     color: rgba(103, 70, 54, 0.4); /* Adjust the alpha value (0.7) for desired transparency */
 }
+.stars {
+    position: relative;
+    font-size: 28px;
+    color: #FFF8E8;
+    top: 13%;
+    left: 225px;
+}
+
+.stars::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    display: inline-block;
+    color: #674636;
+}
+
+.stars[data-rating="1"]::before { content: "★☆☆☆☆"; }
+.stars[data-rating="2"]::before { content: "★★☆☆☆"; }
+.stars[data-rating="3"]::before { content: "★★★☆☆"; }
+.stars[data-rating="4"]::before { content: "★★★★☆"; }
+.stars[data-rating="5"]::before { content: "★★★★★"; }
+
+
+.content{
+    position: absolute;
+    font-size: 15px;
+    color: rgba(103, 70, 54, 0.6); 
+    font-family: 'KEANON';
+    top: 38%;
+    left: 760px;
+}
+.avalibale{
+    position: absolute;
+    font-size: 14px;
+    color: rgb(103, 70, 54); 
+    font-family: 'KEANON';
+    top: 75%;
+    left: 760px;
+    margin-right: 0;
+}
+#image{
+    width: 14px;
+    height: 14px;
+}
+.b1{
+    background-color: #674636;
+    border-radius: 30px;
+    font-size: 15px; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 170px;
+    text-align: center;
+    font-family: 'KEANON';
+    border: none;
+    cursor: pointer;
+
+
+}
+.button1{
+    position: absolute; 
+    top: 80%; 
+    left: 58%;
+}
+.button1:hover {
+    transform: scale(1.05);
+}
