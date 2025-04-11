@@ -15,7 +15,7 @@ body {
    margin: 0px;
 }
 
-#dado_nav{
+#es_nav{
     margin-top: 25px;
     display: flex;
 }
@@ -26,15 +26,15 @@ body {
     margin-right: 20px;
 }
 
-#dado_bar{
+#es_bar{
     margin-right: -80px; 
 }
 
-#dado_home{
+#es_home{
 
     margin-left: 16px;
 }
-#dado_search{
+#es_search{
     height: 30px;
     width: 250px;
     position: absolute;
@@ -42,30 +42,26 @@ body {
     
  
 }
-
-h4{
+h5{
     
     color: #674636;
     margin: auto; 
 }
-
-h5{
-
-    color: #674636;
-    margin-left: 50px;
-    margin-top: 70px;
+#es_head{
     
+    color: #674636;
+  margin-left: 70px;
 }
+
 
 .dado_toptrend{
 
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-    gap:80px ;
+    gap:140px ;
    
 }
-
 figure{
     margin: 0;
     transition: all 0.3s ease; 
@@ -76,31 +72,25 @@ figure{
 .dado_book
 {
 
-    width:160px;
-    height: 256px;
-    border-radius: 7px 7px 0 0 ;
+    width:180px;
+    height: 265px;
+    border-radius: 7px 7px 0px 0px  ;
     box-shadow: 5PX 5px 10px  #674636 ; 
     margin-bottom: 0;
     display: block;
 }
 
-hr{
-    width:80%;
-    justify-content: center;
-    
-}
-
 figcaption{
     
-    opacity: 0;
+   
     transition: all 0.3s ease;
     color: #fff8e8 ;
     text-align: center;
     background-color:  #674636;
-    width:160px;
+    width:180px;
     font-size: 11px;
     height: 40px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0px 0px 20px 20px;
     box-shadow: 5PX 5px 10px  #674636 ;
    display: flex;
    align-items: center;
@@ -109,14 +99,23 @@ figcaption{
     
 }
 
-.fig_hover:hover figcaption {
 
-    opacity: 1;
-
-}
 
 .fig_hover:hover  {
 
     transform: scale(1.05);
+    cursor: pointer;
     
 }
+
+.esraa_book{
+    width:180px;
+    height: 265px;
+    border-radius: 7px 7px 0px 0px  ;
+    box-shadow: 5PX 5px 10px  #674636 ; 
+    margin-bottom: 0;
+    display: block;
+    opacity: 0.4;
+}
+
+
