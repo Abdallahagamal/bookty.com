@@ -13,11 +13,14 @@ body {
    background-color: #fff8e8;
    padding: 35px;
    margin: 0px;
+   overflow-x: hidden;
+
 }
 
 #es_nav{
     margin-top: 25px;
     display: flex;
+    margin-left: 120px;
 }
 
 .reg-img{
@@ -27,30 +30,43 @@ body {
 }
 
 #es_bar{
+    margin-top: -21px;
     margin-right: -80px; 
 }
-
+#es_cart{
+    margin-top: -21px;
+}
 #es_home{
+    margin-top: -21px;
 
     margin-left: 16px;
 }
 #es_search{
-    height: 30px;
-    width: 250px;
+    margin-top: -15px;
+    height: 27px;
+    width: 300px;
     position: absolute;
-    right: 0px;
-    
- 
+    right: 10px;
+    max-width: 100%;
 }
 h5{
-    
+    position: absolute;
     color: #674636;
-    margin: auto; 
+    margin-top: -10px;
+    left: 45px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
 }
 #es_head{
     
     color: #674636;
-  margin-left: 70px;
+  margin-left: 620px;
+    font-size: 25px;
+    left: 200px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -59,7 +75,7 @@ h5{
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-    gap:140px ;
+    gap:70px ;
    
 }
 figure{
@@ -72,7 +88,7 @@ figure{
 .dado_book
 {
 
-    width:180px;
+    width:190px;
     height: 265px;
     border-radius: 7px 7px 0px 0px  ;
     box-shadow: 5PX 5px 10px  #674636 ; 
@@ -87,7 +103,7 @@ figcaption{
     color: #fff8e8 ;
     text-align: center;
     background-color:  #674636;
-    width:180px;
+    width:190px;
     font-size: 11px;
     height: 40px;
     border-radius: 0px 0px 20px 20px;
@@ -109,7 +125,7 @@ figcaption{
 }
 
 .esraa_book{
-    width:180px;
+    width:190px;
     height: 265px;
     border-radius: 7px 7px 0px 0px  ;
     box-shadow: 5PX 5px 10px  #674636 ; 
