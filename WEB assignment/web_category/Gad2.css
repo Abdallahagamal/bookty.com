@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'KEANON';
+    src: url('KEANON.ttf') format('truetype');
+  }
+  
+  * {
+    font-family: 'KEANON', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    background-color: #fff8e8;
+    overflow-x: hidden;
+  }
+  
+  /* Navigation Bar */
+  #dado_nav {
+    display: flex;
+    align-items: center;
+    margin: 25px 0 0 120px;
+  }
+  
+  .reg-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  
+  #dado_bar {
+    margin-right: -80px;
+  }
+  
+  #dado_home {
+    margin-left: 16px;
+  }
+  
+  #dado_search {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    max-width: 100%;
+    margin-top: 14px;
+  }
+  h4{
+    position: absolute;
+    color: #674636;
+    margin-top: 20px;
+    left: 45px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  /* Page Title */
+  .section-title {
+    text-align: center;
+    color: #674636;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: -20px;
+  }
+  
+  /* Cart Grid */
+  .cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 80px auto 60px;
+    padding: 40px;
+    background-color: #fdf3dd;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Each Book Card */
+  .cart-item {
+    background-color: #fff8e8;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(103, 70, 54, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .cart-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .cart-book-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+  }
+  
+  .book-title {
+    font-size: 18px;
+    color: #674636;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .cart-btn {
+    background-color: #674636;
+    color: #fff8e8;
+    border: none;
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .cart-btn:hover {
+    background-color: #cdbba6;
+    color: #674636;
+  }
+  
+  .quantity {
+    font-size: 18px;
+    color: #674636;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  /* Confirm Button */
+  .cart-footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .confirm-btn {
+    padding: 14px 40px;
+    background-color: #674636;
+    color: #fff8e8;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #cdbba6;
+    color: #674636;
+    transform: scale(1.05);
+  }
+  .director-info {
+    font-size: 14px;
+    color: #674636;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+  
+  .select-btn {
+    background-color: #674636;
+    color: #fff8e8;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .select-btn:hover {
+    background-color: #cdbba6;
+    color: #674636;
+    transform: scale(1.05);
+  }
+  
