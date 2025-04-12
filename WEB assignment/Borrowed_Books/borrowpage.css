@@ -4,134 +4,160 @@
     src: url('KEANON.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  *{
-    font-family: 'KEANON', Arial, Helvetica, sans-serif; 
-  }
+* {
+    font-family: 'KEANON', Arial, Helvetica, sans-serif;
+}
+
 body {
-   background-color: #fff8e8;
-   padding: 35px;
-   margin: 0px;
-   overflow-x: hidden;
+    background-color: #fff8e8;
+    padding: 35px;
+    margin: 0px;
+    overflow-x: hidden;
 
 }
 
-#es_nav{
+#es_nav {
     margin-top: 25px;
     display: flex;
     margin-left: 120px;
 }
 
-.reg-img{
+.reg-img {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
 
-#es_bar{
+#es_bar {
     margin-top: -21px;
-    margin-right: -80px; 
+    margin-right: -80px;
 }
-#es_cart{
+
+#es_cart {
     margin-top: -21px;
 }
-#es_home{
+
+#es_home {
     margin-top: -21px;
 
     margin-left: 16px;
 }
-#es_search{
-    margin-top: -15px;
+
+#es_search {
+    /*margin-top: -15px;
     height: 27px;
     width: 300px;
     position: absolute;
     right: 10px;
+    max-width: 100%;*/
     max-width: 100%;
+    height: 35px;
+    margin-top: -15px;
+    border-radius: 15px;
+    border-color: #674636;
+    background-color: #fff8e8;
+    width: 200px;
+    margin-right: 20px;
+    color: #674636;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 850px;
 }
-h5{
+
+h4 {
     position: absolute;
     color: #674636;
     margin-top: -10px;
-    left: 45px;
+    left: 0px;
     font-size: 20px;
     text-align: center;
     width: 100%;
 }
-#es_head{
-    
+
+#es_head {
+
     color: #674636;
-  margin-left: 620px;
+    margin-left: 530px;
     font-size: 25px;
-    left: 200px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
 
-.dado_toptrend{
+.dado_toptrend {
 
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-    gap:70px ;
-   
+    gap: 70px;
+
 }
-figure{
+
+figure {
     margin: 0;
-    transition: all 0.3s ease; 
-   
+    transition: all 0.3s ease;
+
 }
 
 
-.dado_book
-{
+.dado_book {
 
-    width:190px;
+    width: 190px;
     height: 265px;
-    border-radius: 7px 7px 0px 0px  ;
-    box-shadow: 5PX 5px 10px  #674636 ; 
+    border-radius: 7px 7px 0px 0px;
+    box-shadow: 5PX 5px 10px #674636;
     margin-bottom: 0;
     display: block;
 }
 
-figcaption{
-    
-   
+figcaption {
+
+
     transition: all 0.3s ease;
-    color: #fff8e8 ;
+    color: #fff8e8;
     text-align: center;
-    background-color:  #674636;
-    width:190px;
+    background-color: #674636;
+    width: 190px;
     font-size: 11px;
     height: 40px;
     border-radius: 0px 0px 20px 20px;
-    box-shadow: 5PX 5px 10px  #674636 ;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    
-    
+    box-shadow: 5PX 5px 10px #674636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
 
 
-.fig_hover:hover  {
+.fig_hover:hover {
 
     transform: scale(1.05);
     cursor: pointer;
-    
+
 }
 
-.esraa_book{
-    width:190px;
+#es_search:hover {
+    background-color: #fbebc7;
+    cursor: pointer;
+}
+
+.reg-img:hover {
+    background-color: #f1d7ca;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.esraa_book {
+    width: 190px;
     height: 265px;
-    border-radius: 7px 7px 0px 0px  ;
-    box-shadow: 5PX 5px 10px  #674636 ; 
+    border-radius: 7px 7px 0px 0px;
+    box-shadow: 5PX 5px 10px #674636;
     margin-bottom: 0;
     display: block;
     opacity: 0.4;
 }
-
-
