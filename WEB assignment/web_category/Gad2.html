@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOKTY.com</title>
+  <link rel="stylesheet" href="Gad2.css">
+</head>
+<body class="body">
+  <!-- Navigation Bar -->
+  <div id="dado_nav">
+    <img src="house.png" class="reg-img" id="dado_home" onclick="window.location.href='gad.html'">
+    <img src="cart.png" class="reg-img">
+    <img src="bar.png" class="reg-img" id="dado_bar" onclick="window.location.href='../Borrowed_Books/borrowpage.html'">
+    <h4>BOOKTY.com</h4>
+    <img src="Group 4.png" id="dado_search">
+  </div>
+
+  <!-- Page Title -->
+  <h2 class="section-title">Select Your Book</h2>
+
+  <!-- Cart Grid -->
+  <div class="cart-container">
+    <!-- Cart Item Template (repeat this block for each book) -->
+    <div class="cart-item">
+      <img src="hor1.jpg" alt="Book Title" class="cart-book-img" />
+      <h3 class="book-title">IT</h3>
+      <div class="controls">
+        <button class="select-btn">Select</button>
+      </div>
+    </div>
+    <div class="cart-item">
+        <img src="hor3.jpg" alt="Book Title" class="cart-book-img" />
+        <h3 class="book-title">Al Gazar</h3>
+        <div class="controls">
+          <button class="select-btn">Select</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="img2.jpg" alt="Book Title" class="cart-book-img" />
+        <h3 class="book-title">It ends with </h3>
+        <div class="controls">
+          <button class="select-btn">Select</button>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="img3.jpg" alt="Book Title" class="cart-book-img" />
+        <h3 class="book-title">A good girl</h3>
+        <div class="controls">
+          <button class="select-btn">Select</button>
+        </div>
+      </div>
+  
+
+    <!-- Repeat .cart-item for more books -->
+    <!-- ... -->
+
+    <!-- Confirm Button -->
+    <div class="cart-footer">
+      <button class="confirm-btn">Confirm Selection</button>
+    </div>
+  </div>
+</body>
+</html>

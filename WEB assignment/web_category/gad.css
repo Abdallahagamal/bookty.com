@@ -36,6 +36,19 @@
   #dado_bar {
     margin-top: 5px;
     margin-right: -80px; 
+    
+  }
+  #dado_bar:hover{
+    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
+  #dado_home:hover{
+    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
+  #dado_cart:hover{
+    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
   }
   
   #dado_home {

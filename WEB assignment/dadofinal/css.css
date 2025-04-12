@@ -139,8 +139,8 @@ figcaption {
 }
 
 .reg-img:hover {
-  background-color: #f1d7ca;
-  transform: scale(1.05);
+  transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
   cursor: pointer;
 }
 
