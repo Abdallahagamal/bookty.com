@@ -59,7 +59,7 @@
   }
 
   .left-box h2 {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 20px;
     font-weight: bold;
     color: #674636;
@@ -75,6 +75,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-top: 5%;
 }
 
   .name-fields input {
@@ -180,4 +181,46 @@
     color: #ffffff;
     text-align: center;
 
+}
+
+
+.toggle-group {
+  position: relative;
+  left: 90px;
+  display: flex;
+  border: 2px solid #674636;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 250px;
+  margin-bottom: 25px;
+}
+
+.toggle-option {
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #674636;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.toggle-radio {
+  display: none;
+}
+
+.toggle-radio:checked + .toggle-option {
+  background-color: #674636;
+  color: #FFF8E8;
+}
+
+.toggle-option:first-of-type {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.toggle-option:last-of-type {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }

@@ -10,6 +10,13 @@
     <div class="left-box">
       <h2>Create Account</h2>
      <form action="login.html">
+      <div class="toggle-group">
+        <input type="radio" id="speed" name="choice" class="toggle-radio" checked>
+        <label for="speed" class="toggle-option">ADMIN</label>
+    
+        <input type="radio" id="quality" name="choice" class="toggle-radio">
+        <label for="quality" class="toggle-option">USER</label>
+      </div>
       <div class="name-fields">
         <input type="text" placeholder="First Name" required>
         <input type="text" placeholder="Last Name" required>
@@ -20,6 +27,7 @@
                 <input type="password" placeholder="Confirm Password" required style="margin-top:10px; margin-bottom:20px ;">
       </div>
             <button class="sign-up-btn">SIGN UP</button>
+            
         </div>
     </form>
     <div class="right-box">

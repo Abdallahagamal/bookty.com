@@ -77,13 +77,12 @@ h4 {
 }
 
 #es_head {
-
     color: #674636;
-    margin-left: 530px;
     font-size: 25px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 
