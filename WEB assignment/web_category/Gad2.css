@@ -60,7 +60,6 @@
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: -20px;
-    margin-left: 90px;
   }
   
   /* Cart Grid */
@@ -177,7 +176,6 @@
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
-    
     transition: 0.3s ease-in-out;
   }
   
@@ -185,17 +183,5 @@
     background-color: #cdbba6;
     color: #674636;
     transform: scale(1.05);
-  }
-  #dado_bar:hover{
-    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
-  }
-  #dado_home:hover{
-    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
-  }
-  #dado_cart:hover{
-    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
   }
   
