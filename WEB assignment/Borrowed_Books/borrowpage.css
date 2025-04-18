@@ -5,6 +5,15 @@
     font-weight: normal;
     font-style: normal;
 }
+@keyframes fadeInPage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 
 * {
     font-family: 'KEANON', Arial, Helvetica, sans-serif;
@@ -15,6 +24,7 @@ body {
     padding: 35px;
     margin: 0px;
     overflow-x: hidden;
+    animation: fadeInPage 1s ease-out forwards;
 
 }
 

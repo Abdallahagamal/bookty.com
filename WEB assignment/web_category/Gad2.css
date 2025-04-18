@@ -32,11 +32,17 @@
   #dado_bar {
     margin-right: -80px;
   }
-  
+  #dado_bar:hover{
+    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
   #dado_home {
     margin-left: 16px;
   }
-  
+  #dado_home:hover{
+    transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
   #dado_search {
     position: absolute;
     right: 10px;
@@ -60,6 +66,7 @@
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: -20px;
+    margin-left: 90px;
   }
   
   /* Cart Grid */
