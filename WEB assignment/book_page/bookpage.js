@@ -39,8 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("b11").classList.remove('active');
     }
     else{
-        console.log("not available")
+        const bookAvaliabilityEl2 = document.getElementById("image");
+        const bookava2= document.getElementById("aval");
         document.getElementById("b11").classList.add('active');
+        if (bookAvaliabilityEl2) bookAvaliabilityEl2.src = 'circle-checked.png';
+        if (bookava2) bookava2.textContent = "Available";
+
 
     }
 });
@@ -73,11 +77,25 @@ function showTab(tabName) {
   }
   
 function handleClick(element) {
+    window.location.href = 'bookpage.html';
+    localStorage.removeItem('bookTitle');
+    localStorage.removeItem('bookImage');
+    localStorage.removeItem('bookcate');
+    localStorage.removeItem('bookdecription');
+    localStorage.removeItem('bookavaliability2');
+
     const newtitle = element.getAttribute("data-title");
     const newimage = element.getAttribute("src");
     const newcate = element.getAttribute("data-cate");
     const newdecription = element.getAttribute("data-desc");
     const avaliability = element.getAttribute("data-av");
+    /////////
+    localStorage.setItem("bookTitle", newtitle);
+    localStorage.setItem("bookImage", newimage);
+    localStorage.setItem("bookcate", newcate);
+    localStorage.setItem("bookdecription", newdecription);
+    localStorage.setItem("bookavaliability2", avaliability);
+    //////////
     if (newtitle) {
         let titleEl = document.querySelector(".book-title");
         if (titleEl) titleEl.textContent = newtitle;
@@ -112,10 +130,38 @@ function handleClick(element) {
         document.getElementById("b11").classList.remove('active');
     }
     else{
+        const bookAvaliabilityEl2 = document.getElementById("image");
+        const bookava2= document.getElementById("aval");
         document.getElementById("b11").classList.add('active');
-        if (bookAvaliabilityEl) bookAvaliabilityEl.src = 'circle-checked.png';
-        if (bookava) bookava.textContent = "Available";
-
+        if (bookAvaliabilityEl2) bookAvaliabilityEl2.src = 'circle-checked.png';
+        if (bookava2) bookava2.textContent = "Available";
     }
 
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('.sliderc');
+    const nxtBtns = document.querySelectorAll('.nxt-btn');
+    const preBtns = document.querySelectorAll('.pre-btn');
+  
+    sliders.forEach((slider, i) => {
+      let containerWidth = slider.offsetWidth;
+      let scrollAmount = 1000; // Adjust this value as needed
+  
+      nxtBtns[i].addEventListener('click', () => {
+        slider.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+  
+      preBtns[i].addEventListener('click', () => {
+        slider.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });

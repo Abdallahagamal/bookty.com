@@ -22,11 +22,11 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+body {
     background-color: #FFF8E8;
     font-family: 'KEANON', sans-serif;
-    animation: fadeInPage 1s ease-out forwards;
-
+    animation: fadeInPage 0.2s ease-out forwards;
+    overflow-x: hidden; /* Prevent horizontal sliding */
 }
 .container{
     display: flex;
@@ -44,10 +44,10 @@ body{
     transform: scale(1.1);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    z-index: 5;
+    z-index: 15;
 }
 .left-box{
-    position: relative;
+    position: fixed;
     width: 35%;
     height: 100vh;
     overflow: hidden;
@@ -112,9 +112,9 @@ body{
 .book-info{
     color: rgba(103, 70, 54, 0.4);
     font-size: 15px;
-    position: relative;
+    position: fixed;
     top: 12%;
-    left: 220px;
+    left: 790px;
     cursor: pointer;
 }
 .book-info:hover {
@@ -223,16 +223,87 @@ body{
 }
 .b1.active:hover {
     transform: scale(1.05);
+    transition: transform 0.3s ease, color 0.3s ease; 
+
 }
 
-.dado_book {
+#similar-box{
+    position: relative;
+    overflow: hidden;
+    top: 62%;
+    left: 30%;
+    display: flex;
+    gap: 50px;
+    margin: auto;
+}
+.sliderc{
+    position: relative;
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 40%;
+    margin-left: 50px;
+}
+.sliderc::-webkit-scrollbar {
+    display: none;
+  }
+.slider{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: -60px;
+}
+.pre-btn .material-symbols-outlined{
     position: absolute;
-    top: 36%;
-    left: 50%;
+    top: 32%;
+    left: 60%;
+}
+.nxt-btn .material-symbols-outlined{
+    position: absolute;
+    top: 47.5%;
+}
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 10vw;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFF8E8 100%);
+    cursor: pointer;
+    color: #674636;
+    font-size: 50px;
+    padding: 10px; /* Added padding */
+    z-index: 8;
+}
+.pre-btn{
+    width: 10vw;
+    top: -100px;
+    left: 168px;
+    rotate: 180deg;
+  
+}
+.nxt-btn {
+    top: -100px;
+    right: 820px;
+  }
+.dado_book {
+    position: relative;    
     width: 160px;
     height: 246px;
     border-radius: 7px 7px 7px 7px;
     box-shadow: 5PX 5px 10px #674636;
     margin-bottom: 0;
-    display: block;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .dado_book:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; 
+
   }
