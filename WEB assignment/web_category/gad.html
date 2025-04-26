@@ -23,13 +23,13 @@
     </div>
     
     <div class="carousel-container">
-      <button class="arrow left">&#8249;</button>
+     
     
       <div class="carousel">
         <div class="book active">
           <img src="fan.jpg" alt="Book 1">
         </div>
-        <div class="book">
+        <div class="book ">
           <img src="fan1.jpg" alt="Book 2">
         </div>
         <div class="book">
@@ -38,10 +38,28 @@
         <div class="book">
           <img src="fan4.jpg" alt="Book 4">
         </div>
+        <div class="book">
+          <img src="hor1.jpg" alt="Book 4">
+        </div>
+        <div class="book">
+          <img src="hor2.jpg" alt="Book 4">
+        </div>
+        <div class="book">
+          <img src="hor4.jpg" alt="Book 4">
+        </div>
+        
+        
       </div>
     
-      <button class="arrow right">&#8250;</button>
+     
     </div>
+    <button class="arrow left" onclick="prevBook()">&#8249;</button>
+    <button class="arrow right" onclick="nextBook()">&#8250;</button>
+    
+    
+    
+    
+  </div>
   </div>
 
   <!-- Trending Section -->
@@ -89,6 +107,61 @@
 
   </div>
 
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const books = document.querySelectorAll('.book');
+    let currentIndex = 0;
+    
+    function updateCarousel() {
+      const bookWidth = 230; 
+      const spacing = 20;    
+      const totalBookWidth = bookWidth + spacing;
+    
+      const containerWidth = carousel.parentElement.offsetWidth;
+      const centerPosition = (containerWidth / 2) - (bookWidth / 2);
+    
+
+      let offset = -(currentIndex * totalBookWidth) + centerPosition;
+    
+
+      const maxOffset = 0;
+      const minOffset = -(books.length * totalBookWidth - containerWidth);
+    
+      if (offset > maxOffset) offset = maxOffset;
+      if (offset < minOffset) offset = minOffset;
+    
+      carousel.style.transform = `translateX(${offset}px)`;
+      carousel.style.transition = 'transform 0.5s ease';
+    
+      books.forEach((book, index) => {
+        book.classList.remove('active');
+        if (index === currentIndex) {
+          book.classList.add('active');
+        }
+      });
+    }
+    
+    function moveCarousel(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex >= books.length) currentIndex = books.length - 1;
+      updateCarousel();
+    }
+    
+    updateCarousel();
+    
+    function prevBook() {
+      moveCarousel(-1);
+    }
+    
+    function nextBook() {
+      moveCarousel(1);
+    }
+    </script>
+    
+    
+
+  
  
 </body>
 </html>

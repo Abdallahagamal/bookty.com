@@ -75,7 +75,33 @@
     </figure>
 
   </div>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const selectedBooks = JSON.parse(localStorage.getItem('selectedBooks')) || [];
+  
+      const container = document.querySelector('.dado_toptrend');
+      container.innerHTML = ''; 
+  
+      selectedBooks.forEach(book => {
+        const figure = document.createElement('figure');
+        figure.classList.add('fig_hover');
+  
+        const img = document.createElement('img');
+        img.setAttribute('src', book.img);
+        img.classList.add('dado_book');
+  
+        const caption = document.createElement('figcaption');
+        caption.innerText = 'On Read';
+  
+        figure.appendChild(img);
+        figure.appendChild(caption);
+  
+        container.appendChild(figure);
+      });
+    });
+  </script>
+  
+  
 </body>
 
 </html>

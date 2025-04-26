@@ -111,30 +111,26 @@ h4{
   /* Carousel */
   
   .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    position: relative;
     overflow: hidden;
+  width: 100%;
+  padding-left: 50px;
   }
   
   .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
   }
   
   .book {
-    transform: scale(0.9);
+    transform: scale(0.8); /* الكتب الصغيرة */
     opacity: 0.6;
     transition: all 0.5s ease-in-out;
     margin: 0 15px;
-    margin-top:50px ;
-
+    margin-top: 50px;
   }
   
   .book.active {
-    transform: scale(1.005);
+    transform: scale(1); /* الكتاب الكبير */
     opacity: 1;
     z-index: 10;
   }
@@ -144,7 +140,7 @@ h4{
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   
   .arrow {
@@ -153,7 +149,19 @@ h4{
     border: none;
     cursor: pointer;
     color: #674636;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
+  
+  .arrow.left {
+    left: 460px;
+  }
+  
+  .arrow.right {
+    right: 80px;
+  }
+  
 .Trinding
 {
    background-color: #674636;
@@ -378,4 +386,18 @@ h4{
   transition: 0.3s;
   text-decoration: none;
   cursor: pointer;
+}
+.arroooow
+{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 800px;
+  font-size: 50px;
+  color: #674636;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  transform: scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  justify-content: center;
+  align-items: center;
 }

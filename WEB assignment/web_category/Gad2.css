@@ -191,4 +191,37 @@
     color: #674636;
     transform: scale(1.05);
   }
+  #cart-icon {
+    position: absolute;
+    top: 20px;
+    left: 90px; /* عدلها حسب مكان العربة بالضبط */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    display: none; /* نخليه مخفي أول شيء */
+  }
+  .bulk-controls {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .bulk-controls button {
+    background-color: #674636;
+    color: #fff8e8;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .bulk-controls button:hover {
+    background-color: #cdbba6;
+    color: #674636;
+  }
   
