@@ -93,8 +93,8 @@
     return;
   }
 
-  let containerIndex = 0; // عشان لو عايز توزع الكتب على أكتر من صف
-  let booksPerContainer = 4; // كل صف فيه 4 كتب
+  let containerIndex = 0; 
+  let booksPerContainer = 4; 
 
   selectedBooks.forEach((book, index) => {
     if (index > 0 && index % booksPerContainer === 0) {
@@ -105,16 +105,16 @@
     figure.classList.add('fig_hover');
 
     const img = document.createElement('img');
-    img.setAttribute('src', '../web_category/' + book.img); // اضبط المسار
+    img.setAttribute('src', '../web_category/' + book.img); 
     img.classList.add('dado_book');
 
     const caption = document.createElement('figcaption');
-    caption.innerText = 'On Read'; // ممكن تخليها حسب الحالة لو عايز
+    caption.innerText = 'On Read'; 
 
     figure.appendChild(img);
     figure.appendChild(caption);
 
-    // تأكد إن الكونتينر موجود قبل ما تضيفله
+ 
     if (containers[containerIndex]) {
       containers[containerIndex].appendChild(figure);
     }
