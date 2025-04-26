@@ -41,6 +41,7 @@ body {
   margin-left: 16px;
 }
 
+
 #dado_search {
   border-radius: 15px;
   border-color: #674636;
@@ -50,7 +51,10 @@ body {
   color: #674636;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  margin-left: 1000px;
+  margin-left: 1115px;
+  height: 40px;
+  margin-top: -65px;
+
 
 }
 
@@ -139,8 +143,10 @@ figcaption {
 }
 
 .reg-img:hover {
-  transform:  scale(1.2); /* Moves icon 10px to the right and slightly enlarges it */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  transform: scale(1.2);
+  /* Moves icon 10px to the right and slightly enlarges it */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Smooth transition for transform and color */
   cursor: pointer;
 }
 
@@ -228,4 +234,50 @@ figcaption {
   color: #fff8e8;
   font-size: 13px;
   text-align: center;
+}
+
+
+select option {
+  font-size: 15px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8a614d;
+
+}
+
+.search-wrapper {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  margin-left: 120px;
+}
+
+.search-wrapper select {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  margin-top: -55px;
+  pointer-events: none;
+  margin-left: 1200px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8a614d;
+  background-color: #fbebc7;
+  border: #fbebc7;
+
+}
+
+.search-wrapper:hover select {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.not-available {
+  opacity: 0.5;
+}
+
+.not-available:hover {
+  transform: none;
+  background-color: inherit;
 }

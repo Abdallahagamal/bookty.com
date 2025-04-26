@@ -14,3 +14,108 @@ function handleClick(element) {
     // Go to the book page
     window.location.href = '../book_page/bookpage.html';
 }
+
+
+//--------------Search code esraa--------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("dado_search");
+    const searchType = document.getElementById("searchType");
+    const books = document.querySelectorAll(".dado_book");
+    const searchResults = document.getElementById("searchResults");
+    const allSections = document.querySelectorAll(".dado_toptrend, h5, hr");
+
+
+    const originalBooks = [];
+    books.forEach(book => {
+        const figure = book.closest("figure");
+        if (figure) {
+            originalBooks.push(figure.cloneNode(true));
+        }
+    });
+
+    searchInput.addEventListener("input", function () {
+        const searchValue = searchInput.value.trim().toLowerCase();
+        const selectedType = searchType.value;
+        searchResults.innerHTML = "";
+        let found = false;
+
+        if (searchValue === "") {
+
+            searchResults.style.display = "none";
+
+            allSections.forEach(section => {
+                section.style.display = 'flex';
+                const figures = section.querySelectorAll('figure');
+                figures.forEach(book => {
+                    book.style.display = 'block';
+                });
+            });
+
+
+            return;
+        }
+
+        let matchedBooks = [];
+
+        books.forEach(function (book) {
+            const title = book.getAttribute("data-title")?.toLowerCase() || "";
+            const author = book.getAttribute("data-author")?.toLowerCase() || "";
+            const cate = book.getAttribute("data-cate")?.toLowerCase() || "";
+
+            let match = false;
+
+            if (selectedType === "all") {
+                match = title.includes(searchValue) || author.includes(searchValue) || cate.includes(searchValue);
+            } else if (selectedType === "title") {
+                match = title.includes(searchValue);
+            } else if (selectedType === "author") {
+                match = author.includes(searchValue);
+            } else if (selectedType === "category") {
+                match = cate.includes(searchValue);
+            }
+
+            if (match) {
+                matchedBooks.push(book.closest("figure").cloneNode(true));
+                found = true;
+            }
+        });
+
+        allSections.forEach(section => section.style.display = "none");
+        searchResults.style.display = "flex";
+
+        if (found) {
+            matchedBooks.forEach(book => {
+                book.style.opacity = 0;
+                searchResults.appendChild(book);
+
+
+                setTimeout(() => {
+                    book.style.transition = "opacity 0.5s";
+                    book.style.opacity = 1;
+                }, 50);
+            });
+        } else {
+            const noResult = document.createElement("p");
+            noResult.textContent = "No results found";
+            noResult.style.color = "#674636";
+            noResult.style.fontWeight = "bold";
+            noResult.style.textAlign = "center";
+            noResult.style.fontSize = "25px";
+            searchResults.appendChild(noResult);
+        }
+    });
+});
+
+//----------------------dado delete code---------------------
+window.onload = function () {
+    let deletedBooks = JSON.parse(localStorage.getItem("deletedBooks") || "[]");
+
+    deletedBooks.forEach(id => {
+        // const book = document.getElementById(id);
+        const book = document.querySelector(`[date-id="${id}"]`);
+        if (book) {
+            book.classList.add("not-available");
+            book.getElementsByTagName("figcaption")[0].textContent = "Not available";
+        }
+    });
+};
