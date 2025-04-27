@@ -126,14 +126,12 @@ window.onload = function () {
 
 updateFigure();
 
-
 window.addEventListener('storage', function(event) {
-    if (event.key === "bookTitle3" || event.key === "bookAuthor3" || event.key === "bookcate3" || event.key === "bookdecription3" || event.key === "bookImage3") {
+    if (event.key && event.key.startsWith("book_")) {
         console.log("LocalStorage changed, updating figure...");
         updateFigure();
     }
 });
-
 
 function updateFigure() {
     var selectedId = localStorage.getItem('selectedRowId');
@@ -150,23 +148,23 @@ function updateFigure() {
         return;
     }
 
-    let newTitle = localStorage.getItem("bookTitle3");
-    let newAuthor = localStorage.getItem("bookAuthor3");
-    let newCategory = localStorage.getItem("bookcate3");
-    let newDescription = localStorage.getItem("bookdecription3");
-    let newCover = localStorage.getItem("bookImage3");
+    // جلب البيانات من localStorage باستخدام selectedId
+    let bookDataJSON = localStorage.getItem('book_' + selectedId);
+    if (!bookDataJSON) {
+        console.log("No book data found for selected ID.");
+        return;
+    }
 
-    if (newTitle) bookFigure.setAttribute('data-title', newTitle);
-    if (newAuthor) bookFigure.setAttribute('data-author', newAuthor);
-    if (newCategory) bookFigure.setAttribute('data-cate', newCategory);
-    if (newDescription) bookFigure.setAttribute('data-desc', newDescription);
-    if (newCover) bookFigure.setAttribute('src', newCover);
+    let bookData = JSON.parse(bookDataJSON);
+
+    if (bookData.title) bookFigure.setAttribute('data-title', bookData.title);
+    if (bookData.author) bookFigure.setAttribute('data-author', bookData.author);
+    if (bookData.category) bookFigure.setAttribute('data-cate', bookData.category);
+    if (bookData.description) bookFigure.setAttribute('data-desc', bookData.description);
+    if (bookData.cover) bookFigure.setAttribute('src', bookData.cover);
 
     console.log("Figure updated with new data!");
-
-
 }
-
 
 
 

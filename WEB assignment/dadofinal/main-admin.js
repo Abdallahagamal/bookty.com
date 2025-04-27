@@ -43,9 +43,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 function updateTableRow() {
     var selectedId = localStorage.getItem('selectedRowId');
-
     if (!selectedId) {
-        console.log("No selected ID found to update.");
+        console.log("No selected ID to update.");
         return;
     }
 
@@ -55,18 +54,16 @@ function updateTableRow() {
         return;
     }
 
-    let newTitle = localStorage.getItem("bookTitle3");
-    let newAuthor = localStorage.getItem("bookAuthor3");
-    let newCategory = localStorage.getItem("bookcate3");
+    // نقرأ بيانات الكتاب من localStorage
+    let bookDataJSON = localStorage.getItem('book_' + selectedId);
+    if (bookDataJSON) {
+        let bookData = JSON.parse(bookDataJSON);
 
-    if (newTitle && newAuthor && newCategory) {
         // تحديث خلايا الجدول
-        row.children[0].textContent = newTitle;
-        row.children[1].textContent = newAuthor;
-        row.children[2].textContent = newCategory;
-        console.log("Row updated successfully.");
-    } else {
-        console.log("No new data found to update the row.");
+        row.children[0].textContent = bookData.title;
+        row.children[1].textContent = bookData.author;
+        row.children[2].textContent = bookData.category;
+
+        console.log("Row updated successfully with new book data.");
     }
-    
 }

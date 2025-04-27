@@ -5,18 +5,25 @@ document.getElementById("updateButton").addEventListener("click", function() {
     let newDescription = document.getElementById("description").value;
     let newCover = document.getElementById("cover").value;
 
-    localStorage.setItem("bookTitle3", newTitle);
-    localStorage.setItem("bookAuthor3", newAuthor);
-    localStorage.setItem("bookcate3", newCategory);
-    localStorage.setItem("bookdecription3", newDescription);
-    localStorage.setItem("bookImage3", newCover);
+    let selectedId = localStorage.getItem('selectedRowId'); // ناخد id اللي ضغطنا عليه Edit
+    if (!selectedId) {
+        alert("No selected book to update!");
+        return;
+    }
 
-    alert("Book information has been saved to localStorage!");
-    console.log("Saved new book data:", {
+    // نجهز بيانات الكتاب كـ Object
+    let bookData = {
         title: newTitle,
         author: newAuthor,
         category: newCategory,
         description: newDescription,
         cover: newCover
-    });
-});
+    };
+
+    // نحفظ البيانات في localStorage بمفتاح خاص بالكتاب
+    localStorage.setItem('book_' + selectedId, JSON.stringify(bookData));
+
+    alert("Book information has been updated and saved!");
+    console.log("Saved book data:", bookData);
+    window.location.href = "/dadofinal/main-admin.html"; 
+}); 
