@@ -155,3 +155,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('es_search');
+  const cartItems = document.querySelectorAll('.cart-item');
+
+  const noResultsMessage = document.createElement('div');
+  noResultsMessage.textContent = 'No books found';
+  noResultsMessage.style.color = '#674636';
+  noResultsMessage.style.fontSize = '20px';
+  noResultsMessage.style.textAlign = 'center';
+  noResultsMessage.style.marginTop = '20px';
+  noResultsMessage.style.display = 'none'; 
+  document.querySelector('.cart-container').appendChild(noResultsMessage);
+
+  searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let foundAny = false; 
+
+    cartItems.forEach(function(item) {
+      const titleElement = item.querySelector('.book-title');
+      const titleText = titleElement.innerText.toLowerCase();
+
+      if (titleText.includes(searchTerm)) {
+        item.style.display = 'flex';
+        foundAny = true;
+        titleElement.innerHTML = titleElement.innerText;
+
+        if (searchTerm.length > 0) {
+          const regex = new RegExp(`(${searchTerm})`, 'gi');
+          titleElement.innerHTML = titleElement.innerText.replace(regex, '<mark>$1</mark>');
+        }
+
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    
+    if (!foundAny) {
+      noResultsMessage.style.display = 'block';
+    } else {
+      noResultsMessage.style.display = 'none';
+    }
+  });
+});
+
+
+
+

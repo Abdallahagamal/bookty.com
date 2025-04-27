@@ -401,3 +401,46 @@ h4{
   justify-content: center;
   align-items: center;
 }
+.trending-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+.trending-buttons button {
+  background-color: #674636;
+  color: white;
+  border: none;
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.trending-buttons button:hover {
+  background-color: #523a2a;
+}
+#trending-buttons button.active {
+  background-color: #cdbba6;
+  color: #674636;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#trendingDescription {
+  color: #fff8e8;
+  font-size: 16px;
+  line-height: 1.5;
+  transform: translateY(-80px);
+  
+  text-align: center;
+  background-color: #674636;
+}
+#trendingImg
+{
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  position: relative;
+  top: -125px;
+  left: 20px;
+  margin-left: 20px;
+}

@@ -13,7 +13,6 @@
     <img src="cart.png" class="reg-img" id="dado_cart" onclick="window.location.href='gad2.html'">
     <img src="bar.png" class="reg-img" id="dado_bar" onclick="window.location.href='../Borrowed_Books/borrowpage.html'">
     <h4>BOOKTY.com</h4>
-    <img src="Group 4.png" id="dado_search">
   </div>
 
   <!-- First Section -->
@@ -65,16 +64,23 @@
   <!-- Trending Section -->
   <div class="Trinding">
     <p id="gg">Trending</p>
-    <div class="trending-box">
-      <img src="rr.jpg" alt="Game of Thrones Book" class="trending-img">
+    <div class="trending-box" id="trendingBox">
+      <img src="rr.jpg" alt="Book Image" id="trendingImg" class="trending-img">
       <div class="trending-text">
-        <p id="ggg">
+        <p id="trendingDescription">
           GAME OF THRONES IS THE FIRST BOOK IN THE A SONG OF ICE AND FIRE SERIES BY GEORGE R.R. MARTIN, SET IN THE BRUTAL AND POLITICALLY CHARGED WORLD OF WESTEROS. THE STORY UNFOLDS ACROSS SEVERAL NOBLE HOUSES, INCLUDING THE STARKS OF THE NORTH, THE LANNISTERS OF THE WEST, AND THE TARGARYENS, WHO SEEK TO RECLAIM THE IRON THRONE. WITH POLITICAL INTRIGUE, COMPLEX CHARACTERS, AND SHIFTING ALLEGIANCES, THE NOVEL EXPLORES THEMES OF POWER, HONOR, BETRAYAL, AND SURVIVAL. AT THE HEART OF THE NARRATIVE IS THE STARK FAMILY, LED BY EDDARD STARK 
           <span class="learn-more">LEARN MORE</span>
         </p>
       </div>
     </div>
+  
+    <div class="trending-buttons">
+      <button onclick="prevTrending()">&#8249;</button>
+      <button onclick="nextTrending()">&#8250;</button>
+    </div>
   </div>
+  
+  
   <div class="Discover-more">
     <img src="G.png" alt="">
     <button class="btn" onclick="window.location.href='../dadofinal/html.html'">Discover More</button>
@@ -158,7 +164,52 @@
       moveCarousel(1);
     }
     </script>
-    
+    <script>
+      // بيانات الكتب (صور + نصوص)
+      const trendingBooks = [
+        {
+          img: 'rr.jpg',
+          description: `GAME OF THRONES IS THE FIRST BOOK IN THE A SONG OF ICE AND FIRE SERIES BY GEORGE R.R. MARTIN, SET IN THE BRUTAL AND POLITICALLY CHARGED WORLD OF WESTEROS. THE STORY UNFOLDS ACROSS SEVERAL NOBLE HOUSES, INCLUDING THE STARKS OF THE NORTH, THE LANNISTERS OF THE WEST, AND THE TARGARYENS, WHO SEEK TO RECLAIM THE IRON THRONE. WITH POLITICAL INTRIGUE, COMPLEX CHARACTERS, AND SHIFTING ALLEGIANCES, THE NOVEL EXPLORES THEMES OF POWER, HONOR, BETRAYAL, AND SURVIVAL. AT THE HEART OF THE NARRATIVE IS THE STARK FAMILY, LED BY EDDARD STARK ... <span class="learn-more">LEARN MORE</span> `
+          
+        },
+        {
+          img: 'fan1.jpg',
+          description: `AN EPIC BEGINNING TO A FANTASY SERIES, A WEAVE OF FATES INTRODUCES A WORLD FILLED WITH MAGIC, ANCIENT PROPHECIES, AND HIDDEN DESTINIES. THE STORY FOLLOWS STRONG-WILLED CHARACTERS WHO MUST NAVIGATE POLITICAL INTRIGUE, SECRET WARS, AND THEIR OWN INNER STRUGGLES. AS POWERFUL FORCES AWAKEN FROM A LONG DORMANCY, ALLIANCES ARE TESTED AND ENEMIES ARE FORGED IN A LAND WHERE EVERY DECISION WEAVES A NEW THREAD INTO THE TAPESTRY OF FATE. THIS FIRST INSTALLMENT SETS THE STAGE FOR A GRAND SAGA OF COURAGE, SACRIFICE, AND THE RELENTLESS PURSUIT OF TRUTH.<span class="learn-more">LEARN MORE</span> `
+        },
+        {
+          img: 'hor1.jpg',
+          description: `THE PHOENIX KING IS A CAPTIVATING TALE OF REBIRTH, LEGACY, AND UNYIELDING POWER. SET IN A LAND ON THE BRINK OF WAR, THE STORY FOLLOWS A RULER STRUGGLING TO BALANCE TRADITION AND CHANGE, AS ANCIENT POWERS AWAKEN TO CHALLENGE HIS REIGN. THROUGH BETRAYALS, SACRIFICES, AND IMPOSSIBLE CHOICES, THE CHARACTERS MUST DECIDE WHETHER TO PRESERVE THE PAST OR FORGE A NEW FUTURE. FILLED WITH RICH WORLDBUILDING AND COMPLEX RELATIONSHIPS, THE NOVEL EXPLORES THE TRUE COST OF POWER AND WHAT IT MEANS TO BE A KING.<span class="learn-more">LEARN MORE</span>`
+        },
+        // تقدر تضيف كتب تانيين هنا
+      ];
+      
+      let trendingIndex = 0;
+      
+      // دالة لتحديث المحتوى
+      function updateTrending() {
+        const trendingImg = document.getElementById('trendingImg');
+        const trendingDescription = document.getElementById('trendingDescription');
+      
+        trendingImg.src = trendingBooks[trendingIndex].img;
+        trendingDescription.innerHTML = trendingBooks[trendingIndex].description;
+      }
+      
+      // التالي
+      function nextTrending() {
+        trendingIndex = (trendingIndex + 1) % trendingBooks.length;
+        updateTrending();
+      }
+      
+      // السابق
+      function prevTrending() {
+        trendingIndex = (trendingIndex - 1 + trendingBooks.length) % trendingBooks.length;
+        updateTrending();
+      }
+      
+      // أول مرة الصفحة تفتح
+      updateTrending();
+      </script>
+      
     
 
   

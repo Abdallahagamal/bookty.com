@@ -224,4 +224,30 @@
     background-color: #cdbba6;
     color: #674636;
   }
-  
+  #es_search {
+    width: 250px;
+    height: 40px;
+    margin-top: -15px;
+    margin-left: 1000px;
+    margin-right: 20px;
+    padding: 0 15px;
+    border: 2px solid #674636;
+    border-radius: 20px;
+    background-color: #fff8e8;
+    color: #674636;
+    font-family: 'KEANON', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#es_search:hover {
+    background-color: #fbebc7;
+    cursor: pointer;
+}
+
+#es_search:focus {
+    background-color: #fbebc7;
+    box-shadow: 0 0 8px #674636;
+    border-color: #674636;
+}
