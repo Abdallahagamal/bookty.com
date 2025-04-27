@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Cart-BOOKTY.com</title>
   <link rel="stylesheet" href="Gad2.css">
+  <script src="Gad2.js"></script>
 </head>
 <body class="body">
   <!-- Navigation Bar -->
@@ -110,6 +111,7 @@
         </div>
       </div>
       
+      
   
 
     <!-- Repeat .cart-item for more books -->
@@ -125,99 +127,7 @@
       
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      let selectedCount = 0;
-      const selectButtons = document.querySelectorAll('.select-btn');
-      const cartCount = document.getElementById('cart-count');
-      const selectAllBtn = document.getElementById('select-all');
-      const deselectAllBtn = document.getElementById('deselect-all');
-      const confirmBtn = document.querySelector('.confirm-btn');
   
-      const unavailableBooks = ['img2.jpg', 'fan3.jpg']; // اسماء الصور الغير متاحة
-  
-      function updateCartCount() {
-        if (selectedCount > 0) {
-          cartCount.style.display = 'inline';
-          cartCount.textContent = selectedCount;
-        } else {
-          cartCount.style.display = 'none';
-        }
-      }
-  
-      // Disable unavailable books
-      document.querySelectorAll('.cart-item').forEach(item => {
-        const img = item.querySelector('img');
-        const button = item.querySelector('.select-btn');
-        if (unavailableBooks.includes(img.getAttribute('src'))) {
-          button.disabled = true;
-          button.textContent = "Not Available";
-          button.style.backgroundColor = "gray";
-          button.style.cursor = "not-allowed";
-        }
-      });
-  
-      selectButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          if (this.disabled) return; // skip if disabled
-          if (!this.classList.contains('selected')) {
-            this.classList.add('selected');
-            this.style.backgroundColor = '#cdbba6';
-            this.style.color = '#674636';
-            selectedCount++;
-          } else {
-            this.classList.remove('selected');
-            this.style.backgroundColor = '#674636';
-            this.style.color = '#fff8e8';
-            selectedCount--;
-          }
-          updateCartCount();
-        });
-      });
-  
-      selectAllBtn.addEventListener('click', function() {
-        selectButtons.forEach(button => {
-          if (!button.disabled && !button.classList.contains('selected')) {
-            button.classList.add('selected');
-            button.style.backgroundColor = '#cdbba6';
-            button.style.color = '#674636';
-            selectedCount++;
-          }
-        });
-        updateCartCount();
-      });
-  
-      deselectAllBtn.addEventListener('click', function() {
-        selectButtons.forEach(button => {
-          if (!button.disabled && button.classList.contains('selected')) {
-            button.classList.remove('selected');
-            button.style.backgroundColor = '#674636';
-            button.style.color = '#fff8e8';
-            selectedCount--;
-          }
-        });
-        updateCartCount();
-      });
-  
-      confirmBtn.addEventListener('click', function() {
-        let selectedBooks = [];
-        document.querySelectorAll('.cart-item').forEach(item => {
-          const button = item.querySelector('.select-btn');
-          const img = item.querySelector('img');
-          if (button.classList.contains('selected')) {
-            selectedBooks.push({
-              img: img.getAttribute('src'),
-              title: item.querySelector('.book-title').innerText.trim()
-            });
-          }
-        });
-  
-        localStorage.setItem('selectedBooks', JSON.stringify(selectedBooks));
-
-        window.location.href = '../Borrowed_Books/borrowpage.html';
-      });
-    });
-  </script>
   
   
 </body>

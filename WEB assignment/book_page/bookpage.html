@@ -43,9 +43,16 @@
                 <p id="aval" style="display: inline; margin-right: 2px;">Avalibale</p>
                 <img  src="circle-checked.png" alt="" style="vertical-align: middle;" id="image">
             </div>
-            <div class="button1">
-                <button  class="b1" id="b11">Borrow Now!</button>
+            
+            <div class="button1" id="button-container">
+                <button class="b1" id="b11" onclick="handleClick2(this)">Borrow Now!</button>
             </div>
+            
+            <div id="message-container" >
+                <h1 id="confirmation-message">BOOK ADDED TO YOUR<br>BORROWING CART</h1>
+                <img src="../right.png" alt="" id="image2">
+            </div>
+           
             
             <section id="similar-box" style="display: none;">
                 <button class="pre-btn" style="font-size: 24px; padding: 10px 20px;">

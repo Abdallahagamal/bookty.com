@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//----------------------dado delete code---------------------
+//----------------------dado delete code-------------------
 window.onload = function () {
     let deletedBooks = JSON.parse(localStorage.getItem("deletedBooks") || "[]");
 
@@ -118,4 +118,55 @@ window.onload = function () {
             book.getElementsByTagName("figcaption")[0].textContent = "Not available";
         }
     });
+
 };
+
+//------------------- eyad ubdate data --------------------
+
+
+updateFigure();
+
+
+window.addEventListener('storage', function(event) {
+    if (event.key === "bookTitle3" || event.key === "bookAuthor3" || event.key === "bookcate3" || event.key === "bookdecription3" || event.key === "bookImage3") {
+        console.log("LocalStorage changed, updating figure...");
+        updateFigure();
+    }
+});
+
+
+function updateFigure() {
+    var selectedId = localStorage.getItem('selectedRowId');
+
+    if (!selectedId) {
+        console.log("No selected ID found to update.");
+        return;
+    }
+
+    var bookFigure = document.querySelector('figure[date-id="' + selectedId + '"] img');
+
+    if (!bookFigure) {
+        console.log("Figure not found with selected ID.");
+        return;
+    }
+
+    let newTitle = localStorage.getItem("bookTitle3");
+    let newAuthor = localStorage.getItem("bookAuthor3");
+    let newCategory = localStorage.getItem("bookcate3");
+    let newDescription = localStorage.getItem("bookdecription3");
+    let newCover = localStorage.getItem("bookImage3");
+
+    if (newTitle) bookFigure.setAttribute('data-title', newTitle);
+    if (newAuthor) bookFigure.setAttribute('data-author', newAuthor);
+    if (newCategory) bookFigure.setAttribute('data-cate', newCategory);
+    if (newDescription) bookFigure.setAttribute('data-desc', newDescription);
+    if (newCover) bookFigure.setAttribute('src', newCover);
+
+    console.log("Figure updated with new data!");
+
+
+}
+
+
+
+
