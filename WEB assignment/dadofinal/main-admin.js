@@ -67,3 +67,33 @@ function updateTableRow() {
         console.log("Row updated successfully with new book data.");
     }
 }
+
+
+
+//****************add code AE*****************************//
+
+let tbody = document.querySelector("tbody");
+
+function loadBooks(){
+    let books = JSON.parse(localStorage.getItem("books")) || [];
+    //tbody.innerHTML = ""; // يمسح القديم ويبدأ من جديد
+
+    books.forEach(book => {
+        let tr = document.createElement("tr");
+        tr.setAttribute("date-id", book.id);
+
+        tr.innerHTML = `
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${book.category}</td>
+            <td class="actions">
+                <a href="#" class="btn edit-btn">Edit</a>
+                <a href="#" class="btn btn-danger delete-btn">Delete</a>
+            </td>
+        `;
+
+        tbody.appendChild(tr);
+    });  
+    }
+
+    loadBooks();

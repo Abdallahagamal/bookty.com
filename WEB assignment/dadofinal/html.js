@@ -168,3 +168,52 @@ function updateFigure() {
 
 
 
+//************************************add code AE****************************************//
+
+function loadUserBooks() {
+    // 1. خلي عندك مصفوفة الكتب
+    let books = JSON.parse(localStorage.getItem('books')) || [];
+  
+    // 2. تأكد إن فيه placeholder في الـ HTML لآخر قسم (مثلاً)
+    //    نضع هوماركر في HTML: <div id="booksWrapper"></div>
+    const newbooks = document.getElementById('newbooks');
+  
+    // 3. أنشئ h5 + div جديدين
+    let sectionTitle = document.createElement('h5');
+    sectionTitle.textContent = 'New Books';
+    let newBooksSection = document.createElement('div');
+    newBooksSection.classList.add('dado_toptrend');
+    newBooksSection.id = 'new-books';
+  
+    // 4. لكل كتاب أضف figure
+    books.forEach(book => {
+
+      let figure = document.createElement('figure');
+      figure.classList.add('fig_hover');
+      figure.setAttribute('date-id', book.id);
+      
+  
+      figure.innerHTML = `
+        <img src="${book.cover}" class="dado_book">
+        <figcaption>Available</figcaption>
+      `;
+      const img = figure.querySelector('img');
+      img.setAttribute('data-title', book.title);
+      img.setAttribute('data-av', 'true');
+      img.setAttribute('data-author', book.author);
+      img.setAttribute('data-desc', book.description);
+      img.setAttribute('data-cate', book.category);
+      img.setAttribute('src', book.cover);
+  
+      img.setAttribute('onclick', 'handleClick(this)');
+  
+      newBooksSection.appendChild(figure);
+    });
+  
+    // 5. ضيف الـ h5 والـ section مع بعض في wrapper
+    newbooks.appendChild(sectionTitle);
+    newbooks.appendChild(newBooksSection);
+  }
+  
+ 
+  loadUserBooks();

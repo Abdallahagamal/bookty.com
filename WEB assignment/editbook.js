@@ -25,5 +25,5 @@ document.getElementById("updateButton").addEventListener("click", function() {
 
     alert("Book information has been updated and saved!");
     console.log("Saved book data:", bookData);
-    window.location.href = "/dadofinal/main-admin.html"; 
+    //window.location.href = ".../dadofinal/main-admin.html"; 
 }); 
