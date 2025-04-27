@@ -76,50 +76,29 @@
 
   </div>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const selectedBooks = JSON.parse(localStorage.getItem('selectedBooks')) || [];
-
-  // أولاً امسك الكونتينر بتاع الكتب
-  const containers = document.querySelectorAll('.dado_toptrend');
-
-  // امسح كل الكونتينرز الأول
-  containers.forEach(container => {
-    container.innerHTML = '';
-  });
-
-  if (selectedBooks.length === 0) {
-    // لو مفيش كتب متخزنة
-    containers[0].innerHTML = '<p style="text-align:center;">No books selected yet.</p>';
-    return;
-  }
-
-  let containerIndex = 0; 
-  let booksPerContainer = 4; 
-
-  selectedBooks.forEach((book, index) => {
-    if (index > 0 && index % booksPerContainer === 0) {
-      containerIndex++;
-    }
-
-    const figure = document.createElement('figure');
-    figure.classList.add('fig_hover');
-
-    const img = document.createElement('img');
-    img.setAttribute('src', '../web_category/' + book.img); 
-    img.classList.add('dado_book');
-
-    const caption = document.createElement('figcaption');
-    caption.innerText = 'On Read'; 
-
-    figure.appendChild(img);
-    figure.appendChild(caption);
-
- 
-    if (containers[containerIndex]) {
-      containers[containerIndex].appendChild(figure);
-    }
-  });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+      const selectedBooks = JSON.parse(localStorage.getItem('selectedBooks')) || [];
+  
+      const container = document.querySelector('.dado_toptrend');
+      container.innerHTML = ''; 
+  
+      selectedBooks.forEach(book => {
+        const figure = document.createElement('figure');
+        figure.classList.add('fig_hover');
+  
+        const img = document.createElement('img');
+        img.setAttribute('src', book.img);
+        img.classList.add('dado_book');
+  
+        const caption = document.createElement('figcaption');
+        caption.innerText = 'On Read';
+  
+        figure.appendChild(img);
+        figure.appendChild(caption);
+  
+        container.appendChild(figure);
+      });
+    });
   </script>
   
   
