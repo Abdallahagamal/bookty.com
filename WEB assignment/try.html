@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <title>Create Account</title>
   <link rel="stylesheet" href="try.css">
+  <script src="try.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="left-box">
       <h2>Create Account</h2>
-     <form action="login.html">
+     <form>
       <div class="toggle-group">
         <input type="radio" id="speed" name="choice" class="toggle-radio" checked>
         <label for="speed" class="toggle-option">ADMIN</label>
@@ -26,7 +27,7 @@
                 <input type="password" placeholder="Password" required style="margin-top:10px; margin-bottom:20px ;">
                 <input type="password" placeholder="Confirm Password" required style="margin-top:10px; margin-bottom:20px ;">
       </div>
-            <button class="sign-up-btn">SIGN UP</button>
+            <button class="sign-up-btn" onclick="saveUserData(event)">SIGN UP</button>
             
         </div>
     </form>

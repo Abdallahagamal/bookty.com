@@ -21,12 +21,17 @@
     display: flex;
     align-items: center;
     margin: 25px 0 0 120px;
+    margin-right: 35px;
   }
-  
+  #dado_cart {
+    margin-top: 7px;
+ 
+
+  }
   .reg-img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
+    width: 32px;
+    height: 32px;
+    margin-right: 35px;
   }
   
   #dado_bar {
@@ -227,20 +232,26 @@
   #es_search {
     width: 250px;
     height: 40px;
-    margin-top: -15px;
+    margin-top: 4px;
     margin-left: 1000px;
     margin-right: 20px;
     padding: 0 15px;
-    border: 2px solid #674636;
+    border: none;
     border-radius: 20px;
     background-color: #fff8e8;
     color: #674636;
     font-family: 'KEANON', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 11px;
     outline: none;
     transition: all 0.3s ease;
+    padding-left: 80px;
+    padding-top: 2px;
+    z-index: 666;
 }
-
+#es_search::placeholder {
+    color: #674636;
+    opacity: 0.8;
+}
 #es_search:hover {
     background-color: #fbebc7;
     cursor: pointer;
@@ -250,4 +261,10 @@
     background-color: #fbebc7;
     box-shadow: 0 0 8px #674636;
     border-color: #674636;
+}
+
+#search-icon22 {
+    position: absolute;
+    top: 20px;
+    left: 200px;
 }

@@ -5,7 +5,14 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   font-family: 'KEANON', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -16,6 +23,8 @@ body {
   padding: 0;
   margin: 0px;
   overflow-x: hidden;
+  animation: fadeInPage 1s ease-out forwards;
+
 }
 
 #dado_nav {
@@ -27,9 +36,9 @@ body {
 
 .reg-img {
   margin-top: 9px;
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  margin-right: 27px;
 }
 
 #dado_bar {
@@ -43,10 +52,10 @@ body {
 
 
 #dado_search {
-  border-radius: 15px;
+  border-radius: 20px;
   border-color: #674636;
   background-color: #fff8e8;
-  width: 200px;
+  width: 310px;
   margin-right: 20px;
   color: #674636;
   font-family: Arial, Helvetica, sans-serif;
@@ -54,10 +63,25 @@ body {
   margin-left: 1115px;
   height: 40px;
   margin-top: -65px;
-
-
+  border: none;
+  font-family: keanon;
+  font-size: 10px;
+  color: #674636;
+  padding-left: 60px;
+  
 }
-
+.search-icon{
+  position: absolute;
+  top: -61px;
+  right: 315px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+}
+#dado_search::placeholder {
+  color: #674636;
+  opacity: 0.8;
+}
 h4 {
   position: absolute;
   color: #674636;
@@ -250,6 +274,7 @@ select option {
   margin-top: 25px;
   display: flex;
   margin-left: 120px;
+  
 }
 
 .search-wrapper select {
@@ -259,7 +284,7 @@ select option {
   transition: opacity 0.3s ease;
   margin-top: -55px;
   pointer-events: none;
-  margin-left: 1200px;
+  margin-left: 1300px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   color: #8a614d;
