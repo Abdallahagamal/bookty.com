@@ -238,6 +238,7 @@ h4{
     gap: 30px; 
     align-items: center; 
     justify-content: space-between; 
+  
    
   }
   
@@ -250,10 +251,14 @@ h4{
     top: -1205px;
     left: 20px;
     margin-left: 20px;
+    transition: transform 0.3s ease-in-out ;
+    
   }
   .trending-img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
+    
+
   }
   
   .trending-text {
@@ -467,4 +472,14 @@ h4{
 .scroll-footer{
   margin-top: -250px;
 
+}
+.scroll-footer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.scroll-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

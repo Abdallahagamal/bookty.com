@@ -265,6 +265,23 @@ updateCarousel();
     
 
   
- 
+      <script>
+        const scrollFooter = document.querySelector('.scroll-footer');
+      
+        function checkScroll() {
+          const triggerBottom = window.innerHeight * 0.9; 
+          const footerTop = scrollFooter.getBoundingClientRect().top;
+      
+          if (footerTop < triggerBottom) {
+            scrollFooter.classList.add('visible');
+          } else {
+            scrollFooter.classList.remove('visible');
+          }
+        }
+      
+        window.addEventListener('scroll', checkScroll);
+        checkScroll(); // أول مره لما تفتح الصفحة
+      </script>
+      
 </body>
 </html>
